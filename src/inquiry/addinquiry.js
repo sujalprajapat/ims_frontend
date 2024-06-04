@@ -99,7 +99,7 @@ function Addinquiry() {
         onSubmit: async (values, { resetForm }) => {
             try {
                 // alert('');
-                alert(values.inquiry)
+                // alert(values.inquiry)
                 let token = await localStorage.getItem('token');
 
                 console.log(values.branch);
