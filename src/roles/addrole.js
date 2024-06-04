@@ -8,12 +8,12 @@ const validationSchema = Yup.object({
 })
 function Addrole() {
   const navigate = useNavigate();
-  var [rolename, setrolename] = useState('');
+  var [rolename, setrolename] = useState(true);
   const formik = useFormik({
     initialValues: { name: '' },
     validationSchema: validationSchema,
     onSubmit: async (values, { resetForm }) => {
-
+      setrolename(false);
       try {
 
         let token = await localStorage.getItem('token');
@@ -30,8 +30,6 @@ function Addrole() {
           });
         console.log(response.data);
         if (response.data) {
-          // setlogin(true);
-          resetForm();
           navigate('/role');
         }
       } catch (error) {
@@ -45,16 +43,20 @@ function Addrole() {
       <div className="adminadd">
         <h3>add roles</h3>
         <form onSubmit={formik.handleSubmit}>
-              <h5>role name</h5>
-              <input type="text" name="name" onChange={formik.handleChange} value={formik.values.name} onBlur={formik.handleBlur}></input>
+          <h5>role name</h5>
+          <input type="text" name="name" onChange={formik.handleChange} value={formik.values.name} onBlur={formik.handleBlur}></input>
           {
-                formik.errors.name && formik.touched.name ? (
-                  <span style={{color:"red",textTransform:"capitalize"}}>{formik.errors.name}</span>
-                ) : null
-              }
-              <br></br>
+            formik.errors.name && formik.touched.name ? (
+              <span style={{ color: "red", textTransform: "capitalize" }}>{formik.errors.name}</span>
+            ) : null
+          }
+          <br></br>
           <div>
-            <button className="bttn" type="submit">add</button>
+            {
+              rolename == false ? <button className="bttn" type="submit"> wait</button>
+                :
+                <button className="bttn" type="submit">add</button>
+            }
           </div>
         </form>
       </div>

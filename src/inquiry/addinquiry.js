@@ -82,24 +82,13 @@ function Addinquiry() {
                 console.log(error);
             }, [])
     }, []);
-    var [contact, getcontact] = useState('');
-    var [info, getinfo] = useState('');
-    var [joindate, getjoindate] = useState('');
-    var [refdetail, getrefdetail] = useState('');
-    var [statusdate, getstatusdate] = useState('');
-    var [indate, getindate] = useState('');
-    var [rolename, getrolename] = useState('');
-    var [branchname, getbranchname] = useState('');
-    var [refname, getrefname] = useState('');
-    var [coursename, getcoursename] = useState('');
-    var [statusname, getstatusname] = useState('');
+    var [info, getinfo] = useState(true);
     const formik = useFormik({
-        initialValues: { branch:'', name:'' ,contact:'',course:'',joindate:'',reference:'',detail:'',inquiry:'',status:'',statusdate:'',inquirydate:''},
+        initialValues: { branch: '', name: '', contact: '', course: '', joindate: '', reference: '', detail: '', inquiry: '', status: '', statusdate: '', inquirydate: '' },
         validationSchema: validationSchema,
         onSubmit: async (values, { resetForm }) => {
+            getinfo(false);
             try {
-                // alert('');
-                // alert(values.inquiry)
                 let token = await localStorage.getItem('token');
 
                 console.log(values.branch);
@@ -124,7 +113,6 @@ function Addinquiry() {
                     });
                 console.log(response.data);
                 if (response.data) {
-                    // setlogin(true);
                     resetForm();
                     navigate('/inquiry');
                 }
@@ -142,7 +130,7 @@ function Addinquiry() {
                     <div className="d-flex justify-content-between flex-wrap ">
                         <div className="text">
                             <h5>branch</h5>
-                            <select  name="branch" onChange={formik.handleChange} value={formik.values.branch} onBlur={formik.handleBlur}>
+                            <select name="branch" onChange={formik.handleChange} value={formik.values.branch} onBlur={formik.handleBlur}>
                                 <option value=''>select branch</option>
                                 {
                                     branch.map((ele, ind) => {
@@ -171,7 +159,7 @@ function Addinquiry() {
                         </div>
                         <div className="text">
                             <h5>contact</h5>
-                            <input type="text"  name="contact" onChange={formik.handleChange} value={formik.values.contact} onBlur={formik.handleBlur}></input>
+                            <input type="text" name="contact" onChange={formik.handleChange} value={formik.values.contact} onBlur={formik.handleBlur}></input>
                             <br></br>
                             {
                                 formik.errors.contact && formik.touched.contact ? (
@@ -199,10 +187,6 @@ function Addinquiry() {
                                 ) : null
                             }
                         </div>
-                        {/* <div className="text">
-                        <h5>extra info</h5>
-                        <input type="text" onChange={(e) => { getinfo(e.target.value) }} value={info}></input>
-                    </div> */}
                         <div className="text">
                             <h5>join date</h5>
                             <input type="date" name="joindate" onChange={formik.handleChange} value={formik.values.joindate} onBlur={formik.handleBlur}></input>
@@ -235,7 +219,7 @@ function Addinquiry() {
                         </div>
                         <div className="text">
                             <h5>ref. detail</h5>
-                            <input type="text"  name="detail" onChange={formik.handleChange} value={formik.values.detail} onBlur={formik.handleBlur}></input>
+                            <input type="text" name="detail" onChange={formik.handleChange} value={formik.values.detail} onBlur={formik.handleBlur}></input>
                             <br></br>
                             {
                                 formik.errors.detail && formik.touched.detail ? (
@@ -246,7 +230,7 @@ function Addinquiry() {
                         <div className="text">
                             <h5>inquiry by</h5>
                             <select name="inquiry" onChange={formik.handleChange} value={formik.values.inquiry} onBlur={formik.handleBlur}>
-        
+
                                 <option value=''>select role</option>
                                 {
                                     role.map((ele, ind) => {
@@ -304,12 +288,15 @@ function Addinquiry() {
                         </div>
                     </div>
                     <div>
-                        <button className="bttn" type="submit">add</button>
+                        {
+                            info == false ? <button className="bttn" type="submit"> wait</button>
+                                :
+                                <button className="bttn" type="submit">add</button>
+                        }
                     </div>
                 </form>
             </div>
         </div>
     )
-    // getname('');getcontact('');getinfo('');getjoindate('default');getrefdetail('');getstatusdate('default');getindate('default');getrolename('default');getbranchname('default');getrefname('default');getcoursename('default');getstatusname('default')
 }
 export default Addinquiry

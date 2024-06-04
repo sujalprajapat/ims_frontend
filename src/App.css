@@ -5,10 +5,7 @@
   font-style: normal;
 }
 body{
-  /* background-color:#1D222B !important; */
   font-family: "kurale" !important;
-  /* height: 1000px; */
-  /* background-color: ; */
 }
 .bttn {
    text-transform: uppercase;
@@ -27,23 +24,14 @@ a,Link{
   color: inherit;
   text-decoration: none;
 }
-/* .navbar1 {
-   position: fixed !important;
-   top: 0;
-   left: 0;
-} */
 .menu{
   position: fixed !important;
   top: 0;
   left: 0;
   background-color: #036685;
-  /* margin: 0px 20px; */
   color: white;
   height: 60px;
   width: 100% !important;
-  /* box-shadow: 10px 10px 10px; */
-  /* box-shadow: 0px 1px 10px black;  */
-
   letter-spacing: 2px;
   padding: 5px 40px;
 }
@@ -69,28 +57,19 @@ a,Link{
   position: fixed !important;
   top: 60px;
   left: 0;
-  /* display: none; */
-  /* background-color: white; */
   color: black;
   text-transform: capitalize;
   width: 300px;
   overflow: hidden;
   height: 92vh;
-  /* border: 1px solid lightgray; */
-  /* border-radius: 0px 10px; */
   box-shadow: 1px 10px 20px lightgrey; 
-  /* box-shadow-top: ; */
-  /* border-radius: 20px; */
-  /* padding-left: 10px; */
 }
 .admin_name{
   padding: 20px 10px;
-  /* padding-bottom: 0px; */
 }
 .admin_name p {
   text-transform: lowercase;
   margin-left: 10px;
-  /* margin-left: 80px; */
   color: grey;
   text-align: end;
   margin-bottom: 0px;
@@ -102,7 +81,6 @@ a,Link{
 }
 .main_menu {
   padding: 0px;
-  /* padding-top:40px; */
 }
 .main_menu hr{
   margin: 0px !important;
@@ -132,7 +110,6 @@ a,Link{
 .main_menu li:hover .submenu{
   display: block;
   transition:.5s;
-  /* background-color:black; */
 }
 /* dashboard page csss */
 .dashboard{
@@ -148,7 +125,6 @@ a,Link{
   width: 400px;
   height: 180px;
   margin: 20px auto;
-  /* border: 20px solid black; */
   background-color: black;
   box-shadow: 0px 1px 5px grey; 
 }
@@ -162,20 +138,15 @@ a,Link{
   text-decoration: none;
   padding-left: 20px;
   display: flex;
-  /* justify-content: flex-end; */
   color: white;
   text-align: right;
 }
 /* admin add css */
 .adminadd{
   padding:10px 30px !important;
-  /* border: 1px solid #dbdfe6 !important; */
-  /* border:1px solid rgba(50, 50, 93, .02); */
   text-transform: uppercase;
-  /* height: 500px; */
   width: 500px;
   margin: auto;
-  /* margin-top: 10px; */
   color: black;
   box-shadow: 1px 1px 5px;
   border-radius: 10px;
@@ -184,7 +155,6 @@ a,Link{
 .adminadd  h3{
   padding: 10px;
   text-align: center;
-  /* color:#E0B612; */
   border-bottom: 1px solid lightgrey;
 }
 .adminadd h5{
@@ -218,7 +188,6 @@ a,Link{
 /* inquiry css */
 .inquiry {
   width: 100%;
-  /* height: 500px; */
   padding:10px 30px;
   text-transform: uppercase;
   color: black;
@@ -236,7 +205,6 @@ a,Link{
   border-radius: 5px;
   height: 35px;
   font-size: 14px;
-  /* color: grey; */
   border: 2px solid grey;
 
 }
@@ -245,15 +213,11 @@ a,Link{
   border-radius: 5px;
   height: 35px;
   font-size: 14px;
-  /* margin-bottom: 40px; */
-  /* box-shadow: none; */
-  /* color: grey; */
   border: 2px solid grey;
 }
 .inquiry h3{
   padding: 12px;
   text-align: center;
-  /* color:#E0B612; */
   border-bottom: 1px solid lightgrey;
 }
 .inquiry h5{
@@ -299,14 +263,8 @@ a,Link{
   border-bottom: 1px solid lightgrey;
 }
 .data_table .table {
-  /* width: 100%; */
   margin: auto;
   padding: 20px;
-}
-.data_table .table tr {
-  /* display: flex; */
-  /* justify-content: space-evenly; */
-  /* border-bottom: 1px solid rgba(61,65,75,0.5); */
 }
 table {
   text-align: center;
@@ -353,7 +311,6 @@ table {
   padding: 5px 10px !important;
   border-radius: 5px;
   text-decoration: none;
-  /* text-transform: uppercase; */
 }
 .button:hover{
   color: #036685 !important;
@@ -363,10 +320,8 @@ table {
 .contain {
   color: white;
   position: relative;
-  /* font-family: sans-serif; */
   background-color:#292f3c;
   border-radius: 0.7rem;
-  /* box-shadow: 1px 1px 10px !important; */
 
 }
 
@@ -399,11 +354,7 @@ table {
   width: 400px;
   height: 200px;
   padding: 1rem;
-  /* background-image: url(./image/inquiry.webp); */
-  /* background-color: rgba(116, 122, 242, 0.074); */
   border: 1px solid rgba(255, 255, 255, 0.222);
-  /* -webkit-backdrop-filter: blur(2px); */
-  /* backdrop-filter: blur(5px); */
   border-radius: 0.7rem;
   transition: all ease 0.3s;
 }
@@ -469,7 +420,6 @@ table {
 
 .form .form_header {
   display: flex;
-  /* justify-content: start; */
   align-items: center;
 }
 
@@ -495,7 +445,6 @@ table {
   padding: 5px;
   width: 100%;
   color: #7a7ab3;
-  /* margin-bottom: 20px !important ; */
   border: 1px solid #dadaf7
 }
 
@@ -803,21 +752,44 @@ footer .demo a {
   background-color: white;
   color: #036685;
 }
-/* -------------------user info css ------------------------- */
-/* .userinfo{
+/* loader css */
+.loader {
+  margin: 40px auto;
+  width: 44.8px;
+  height: 44.8px;
+  color: #036685;
   position: relative;
-} */
-/* .userinfo1 
-{
-  margin-top: 14px;
-  background-color: rgba(0, 0,0,0.8);
+  background: radial-gradient(11.2px,currentColor 94%,#0000);
+}
+
+.loader:before {
+  content: '';
+  margin: auto;
   position: absolute;
-  top: 100%;
-  right:-50%;
-  padding: 40px 20px;
-  border-radius: 5px;
-} */
-/* .userinfo .icon:hover .userinfo1 
-{
-  display: none;
-} */
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(10.08px at bottom right,#0000 94%,currentColor) top    left,
+          radial-gradient(10.08px at bottom left ,#0000 94%,currentColor) top    right,
+          radial-gradient(10.08px at top    right,#0000 94%,currentColor) bottom left,
+          radial-gradient(10.08px at top    left ,#0000 94%,currentColor) bottom right;
+  background-size: 22.4px 22.4px;
+  background-repeat: no-repeat;
+  animation: loader 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+
+@keyframes loader {
+  33% {
+    inset: -11.2px;
+    transform: rotate(0deg);
+  }
+
+  66% {
+    inset: -11.2px;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
+}

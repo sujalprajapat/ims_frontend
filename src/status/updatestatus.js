@@ -5,8 +5,7 @@ function Updatestatus(){
     var [data,setdata] =useState ([]);
     var [name,getname] = useState(' ')
     var {id} = useParams();
-    //  var value =[];
-    var val = data.find((ele,ind)=>{ return ele._id == id })
+    var val = data.find((ele,ind)=>{ return ele._id === id })
     useEffect(() => {
       update();
     }, [])
@@ -35,7 +34,6 @@ function Updatestatus(){
             if(val){
                 getname(val.status || '');
             }
-            // value = data;
     }
     const Submit = async () => {
         try {
