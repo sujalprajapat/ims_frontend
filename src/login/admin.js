@@ -12,7 +12,7 @@ function Admin() {
   const navigate = useNavigate();
   const Submit = async () => {
     try {
-      const response = await axios.post('/admin_login', {
+      const response = await axios.post('https://inquiry-management-system-api.onrender.com/admin_login', {
         email: email,
         password: pass,
       });
@@ -37,7 +37,7 @@ function Admin() {
     }
   };
   const logout = () => {
-    axios.get('https://ims-api-itdw.onrender.com/auth/logout_admin')
+    axios.get('https://inquiry-management-system-api.onrender.com/admin_logout')
       .then(function (response) {
         // handle success
         console.log(response.data);

@@ -16,7 +16,7 @@ function Inquiry() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/inquiry/view_inquiry', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/inquiry/view_inquiry', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -33,7 +33,7 @@ function Inquiry() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/inquiry/delete_inquiry/' + id, { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/inquiry/delete_inquiry/' + id, { headers })
             .then(function (response) {
                 setdata(response.data.data);
                 viewinquiry();

@@ -19,7 +19,7 @@ function Add() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/branch/view_branch', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/branch/view_branch', { headers })
             .then(function (response) {
                 // handle success
                 // console.log(response.data.data);
@@ -29,7 +29,7 @@ function Add() {
                 // handle error
                 console.log(error);
             }, [])
-        axios.get('/role/view_role', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/role/view_role', { headers })
             .then(function (response) {
                 // handle success
                 // console.log(response.data.data);
@@ -67,7 +67,7 @@ function Add() {
                 var headers = {
                     Authorization: token,
                 }
-                const response = await axios.post('/add_admin', formData,
+                const response = await axios.post('https://inquiry-management-system-api.onrender.com/add_admin', formData,
                     {
                         headers
                     }

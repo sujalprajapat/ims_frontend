@@ -13,7 +13,7 @@ function Status() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/status/view_status', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/status/view_status', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -29,7 +29,7 @@ function Status() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/status/delete_status/' + id, { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/status/delete_status/' + id, { headers })
             .then(function (response) {
                 // handle success
                 setdata(response.data.data);

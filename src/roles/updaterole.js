@@ -20,7 +20,7 @@ function Updaterole() {
     var headers = {
       Authorization: token,
     }
-    axios.get('/role/view_role', { headers })
+    axios.get('https://inquiry-management-system-api.onrender.com/role/view_role', { headers })
       .then(function (response) {
         // handle success
         console.log(response.data.data);
@@ -39,7 +39,7 @@ function Updaterole() {
       var headers = {
         Authorization: token,
       }
-      const response = await axios.post('/role/update_role/' + id, {
+      const response = await axios.post('https://inquiry-management-system-api.onrender.com/role/update_role/' + id, {
         rolename: name,
       },
         {

@@ -23,7 +23,7 @@ function Update() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/branch/view_branch', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/branch/view_branch', { headers })
             .then(function (response) {
                 // handle success
                 setbranch(response.data.data);
@@ -32,7 +32,7 @@ function Update() {
                 // handle error
                 console.log(error);
             }, [])
-        axios.get('/role/view_role', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/role/view_role', { headers })
             .then(function (response) {
                 // handle success
                 setrole(response.data.data);
@@ -61,7 +61,7 @@ function Update() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/view_admin', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/view_admin', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -84,7 +84,7 @@ function Update() {
             var headers = {
                 Authorization: token,
             }
-            const response = await axios.post('/update_admin/' + id, {
+            const response = await axios.post('https://inquiry-management-system-api.onrender.com/update_admin/' + id, {
                 name: name,
                 email: email,
                 password: pass,

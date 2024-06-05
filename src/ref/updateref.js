@@ -21,7 +21,7 @@ function Updateref() {
     var headers = {
       Authorization: token,
     }
-    axios.get('/reference/view_reference', { headers })
+    axios.get('https://inquiry-management-system-api.onrender.com/reference/view_reference', { headers })
       .then(function (response) {
         // handle success
         console.log(response.data.data);
@@ -41,7 +41,7 @@ function Updateref() {
       var headers = {
         Authorization: token,
       }
-      const response = await axios.post('/reference/update_reference/' + id, {
+      const response = await axios.post('https://inquiry-management-system-api.onrender.com/reference/update_reference/' + id, {
         reference_name: name,
       },
         {

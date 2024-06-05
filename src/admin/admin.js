@@ -13,7 +13,7 @@ function Admin() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/view_admin', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/view_admin', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -29,7 +29,7 @@ function Admin() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/delete_admin/' + id, { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/delete_admin/' + id, { headers })
             .then(function (response) {
                 // handle success
                 setdata(response.data.dat);

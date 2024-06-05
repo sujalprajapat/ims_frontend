@@ -31,7 +31,7 @@ function Addinquiry() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/branch/view_branch', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/branch/view_branch', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -41,7 +41,7 @@ function Addinquiry() {
                 // handle error
                 console.log(error);
             }, [])
-        axios.get('/role/view_role', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/role/view_role', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -51,7 +51,7 @@ function Addinquiry() {
                 // handle error
                 console.log(error);
             }, [])
-        axios.get('/course/view_course', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/course/view_course', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -61,7 +61,7 @@ function Addinquiry() {
                 // handle error
                 console.log(error);
             }, [])
-        axios.get('/reference/view_reference', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/reference/view_reference', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -71,7 +71,7 @@ function Addinquiry() {
                 // handle error
                 console.log(error);
             }, [])
-        axios.get('/status/view_status', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/status/view_status', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -95,7 +95,7 @@ function Addinquiry() {
                 var headers = {
                     Authorization: token,
                 }
-                const response = await axios.post('/inquiry/add_inquiry', {
+                const response = await axios.post('https://inquiry-management-system-api.onrender.com/inquiry/add_inquiry', {
                     branch_id: values.branch,
                     name: values.name,
                     contact: values.contact,

@@ -20,7 +20,7 @@ function Updatecourse() {
     var headers = {
       Authorization: token,
     }
-    axios.get('/course/view_course', { headers })
+    axios.get('https://inquiry-management-system-api.onrender.com/course/view_course', { headers })
       .then(function (response) {
         // handle success
         console.log(response.data.data);
@@ -43,7 +43,7 @@ function Updatecourse() {
       var headers = {
         Authorization: token,
       }
-      const response = await axios.post('/course/update_course/' + id, {
+      const response = await axios.post('https://inquiry-management-system-api.onrender.com/course/update_course/' + id, {
         course: name,
       },
         {

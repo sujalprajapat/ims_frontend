@@ -22,7 +22,7 @@ function Updatebranch() {
     var headers = {
       Authorization: token,
     }
-    axios.get('/branch/view_branch', { headers })
+    axios.get('https://inquiry-management-system-api.onrender.com/branch/view_branch', { headers })
       .then(function (response) {
         // handle success
         console.log(response.data.data);
@@ -44,7 +44,7 @@ function Updatebranch() {
       var headers = {
         Authorization: token,
       }
-      const response = await axios.post('/branch/update_branch/' + id, {
+      const response = await axios.post('https://inquiry-management-system-api.onrender.com/branch/update_branch/' + id, {
         branchname: name,
       },
         {

@@ -14,7 +14,7 @@ function Dashboard() {
             Authorization: token,
         }
         console.log(token);
-        axios.get('/inquiry/view_inquiry', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/inquiry/view_inquiry', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.dat);
@@ -25,7 +25,7 @@ function Dashboard() {
                 // handle error
                 console.log(error);
             })
-        axios.get('/branch/view_branch', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/branch/view_branch', { headers })
             .then(function (response) {
                 // handle success
                 setbranch(response.data.dat);
@@ -34,7 +34,7 @@ function Dashboard() {
                 // handle error
                 console.log(error);
             })
-        axios.get('/course/view_course', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/course/view_course', { headers })
             .then(function (response) {
                 // handle success
                 setcourse(response.data.dat);
@@ -43,7 +43,7 @@ function Dashboard() {
                 // handle error
                 console.log(error);
             })
-        axios.get('/role/view_role', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/role/view_role', { headers })
             .then(function (response) {
                 // handle success
                 setrole(response.data.dat);

@@ -14,7 +14,7 @@ function Role() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/role/view_role', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/role/view_role', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -30,7 +30,7 @@ function Role() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/role/delete_role/' + id, { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/role/delete_role/' + id, { headers })
             .then(function (response) {
                 // handle success
                 setdata(response.data.data);

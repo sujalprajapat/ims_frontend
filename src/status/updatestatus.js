@@ -20,7 +20,7 @@ function Updatestatus(){
         var headers = {
           Authorization:token,
         }
-        axios.get('/status/view_status',{headers})
+        axios.get('https://inquiry-management-system-api.onrender.com/status/view_status',{headers})
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -43,7 +43,7 @@ function Updatestatus(){
           var headers = {
             Authorization:token,
           }
-          const response = await axios.post('/status/update_status/'+id, {
+          const response = await axios.post('https://inquiry-management-system-api.onrender.com/status/update_status/'+id, {
             status: name, 
           },
           {

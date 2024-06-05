@@ -20,7 +20,7 @@ function Addbranch() {
         var headers = {
           Authorization: token,
         }
-        const response = await axios.post('/branch/add_branch', {
+        const response = await axios.post('https://inquiry-management-system-api.onrender.com/branch/add_branch', {
           branchname: values.name,
         },
           {

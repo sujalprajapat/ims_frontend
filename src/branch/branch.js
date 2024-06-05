@@ -15,7 +15,7 @@ function Branch() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/branch/view_branch', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/branch/view_branch', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -32,7 +32,7 @@ function Branch() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/branch/delete_branch/' + id, { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/branch/delete_branch/' + id, { headers })
             .then(function (response) {
                 // handle success
                 setdata(response.data.data);

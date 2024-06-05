@@ -22,7 +22,7 @@ function Addcourse() {
         var headers = {
           Authorization: token,
         }
-        const response = await axios.post('/course/add_course', {
+        const response = await axios.post('https://inquiry-management-system-api.onrender.com/course/add_course', {
           course: values.name,
         },
           {

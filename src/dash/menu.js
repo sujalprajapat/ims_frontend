@@ -41,7 +41,7 @@ function Menu() {
       Authorization: token,
     }
     console.log(token);
-    axios.get('/view_admin', { headers })
+    axios.get('https://inquiry-management-system-api.onrender.com/view_admin', { headers })
       .then(function (response) {
         // handle success
         console.log(response.data.dat);
@@ -54,7 +54,7 @@ function Menu() {
   const logout = () => {
     localStorage.removeItem('token')
     dish(check());
-    axios.get('/admin_logout')
+    axios.get('https://inquiry-management-system-api.onrender.com/admin_logout')
       .then(function (response) {
         // handle success
         console.log(response.data);

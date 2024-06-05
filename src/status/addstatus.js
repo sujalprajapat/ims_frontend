@@ -22,7 +22,7 @@ function Addstatus() {
         var headers = {
           Authorization: token,
         }
-        const response = await axios.post('/status/add_status', {
+        const response = await axios.post('https://inquiry-management-system-api.onrender.com/status/add_status', {
           status: values.name,
         },
           {

@@ -21,7 +21,7 @@ function Addref() {
         var headers = {
           Authorization: token,
         }
-        const response = await axios.post('/reference/add_reference', {
+        const response = await axios.post('https://inquiry-management-system-api.onrender.com/reference/add_reference', {
           reference_name: values.name,
         },
           {

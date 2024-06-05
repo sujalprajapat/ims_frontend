@@ -13,7 +13,7 @@ function Ref() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/reference/view_reference', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/reference/view_reference', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -29,7 +29,7 @@ function Ref() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/reference/delete_reference/' + id, { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/reference/delete_reference/' + id, { headers })
             .then(function (response) {
                 // handle success
                 setdata(response.data.dat);

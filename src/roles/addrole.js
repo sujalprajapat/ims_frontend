@@ -22,7 +22,7 @@ function Addrole() {
         var headers = {
           Authorization: token,
         }
-        const response = await axios.post('/role/add_role', {
+        const response = await axios.post('https://inquiry-management-system-api.onrender.com/role/add_role', {
           rolename: values.name,
         },
           {

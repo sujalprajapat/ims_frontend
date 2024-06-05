@@ -13,7 +13,7 @@ function Course() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/course/view_course', { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/course/view_course', { headers })
             .then(function (response) {
                 // handle success
                 console.log(response.data.data);
@@ -29,7 +29,7 @@ function Course() {
         var headers = {
             Authorization: token,
         }
-        axios.get('/course/delete_course/' + id, { headers })
+        axios.get('https://inquiry-management-system-api.onrender.com/course/delete_course/' + id, { headers })
             .then(function (response) {
                 // handle success
                 setdata(response.data.dat);
