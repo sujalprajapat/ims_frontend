@@ -5,6 +5,7 @@
   font-style: normal;
 }
 body{
+  overflow: hidden;
   font-family: "kurale" !important;
 }
 .bttn {
@@ -31,9 +32,9 @@ a,Link{
   background-color: #036685;
   color: white;
   height: 60px;
-  width: 100% !important;
+  width: 100% ;
   letter-spacing: 2px;
-  padding: 5px 40px;
+  /* padding: 5px 40px; */
 }
 .menu h2{
   font-size: 36px;
@@ -113,11 +114,14 @@ a,Link{
 }
 /* dashboard page csss */
 .dashboard{
+  overflow: hidden;
+  margin-top: 20px;
   width: 80%;
   position: absolute;
-  padding: 40px;
-  top: 50px;
-  left: 300px;
+  /* padding: 40px; */
+  top: 100px;
+  left: 0px;
+  margin-left:300px ;
   color: white;
 }
 .dashboard .dash_box{
@@ -143,10 +147,11 @@ a,Link{
 }
 /* admin add css */
 .adminadd{
-  padding:10px 30px !important;
+  margin: 20px auto!important;
+  padding:10px 30px;
   text-transform: uppercase;
   width: 500px;
-  margin: auto;
+  /* margin: auto; */
   color: black;
   box-shadow: 1px 1px 5px;
   border-radius: 10px;
@@ -187,7 +192,8 @@ a,Link{
 }
 /* inquiry css */
 .inquiry {
-  width: 100%;
+  margin: 20px auto!important;
+  width: calc(100% - 60px);
   padding:10px 30px;
   text-transform: uppercase;
   color: black;
@@ -254,12 +260,12 @@ a,Link{
   background-color: white;
   box-shadow: 1px 1px 5px ;
   border-radius: 10px;
-  padding: 50px;
+  padding: 50px auto !important;
 }
 .data_table .heading{
   text-align: center;
   text-transform: uppercase;
-  padding-bottom:30px ;
+  padding:40px 0px;
   border-bottom: 1px solid lightgrey;
 }
 .data_table .table {
@@ -286,6 +292,7 @@ table {
   padding: 5px;
   text-align: end;
   margin: 20px auto;
+  margin-bottom: 30px !important;
   margin-top: 40px;
   background-color:#036685;
   display: flex;
@@ -302,7 +309,8 @@ table {
  color:#036685;
 }
 .data_table1{
-  width: 500px !important;
+  flex-wrap: wrap;
+  width: 500px ;
   margin: 40px auto;
 }
 .button{
@@ -318,6 +326,8 @@ table {
 }
 /* -------------card css-------------- */
 .contain {
+  overflow: hidden;
+  margin: 20px 0px;
   color: white;
   position: relative;
   background-color:#292f3c;
@@ -482,7 +492,7 @@ table {
 .wrapper {
   position: fixed;
   bottom: 10%;
-  right: 5%;
+  right: 10%;
   transform: translate(-50%, -50%);
   width: 60px;
   height: 60px;
@@ -791,5 +801,64 @@ footer .demo a {
   100% {
     inset: 0;
     transform: rotate(90deg);
+  }
+}
+
+@media (max-width : 1200px) {
+  .dashboard{
+  overflow: hidden;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left:0px ;
+  }
+  /* .wrapper{
+    margin-right: 100px;
+  } */
+}
+@media (max-width:768px) {
+  .contain .box {
+    text-transform: capitalize;
+    width: 200px;
+    height: 100px;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    border-radius: 0.7rem;
+    transition: all ease 0.3s;
+  }
+  .wrapper{
+    margin-right: 50px;
+  }
+  /* .sub-circle {
+    top: 10;
+    left: -5;
+  } */
+}
+@media (max-width:500px) {
+  .adminadd {
+    width: 300px;
+  }
+  .inquiry .text input{
+    width: calc(120%);
+  }
+  .data_table1 , .data_table {
+    width: 400px;
+    margin: 40px auto;
+    /* overflow-x: auto; */
+  }
+  td {
+    padding: 10px 2px;
+  }
+}
+@media (max-width:400px) {
+  .data_table1 ,.data_table {
+    width: 300px;
+    padding: 30px 5px;
+    margin: 40px auto;
+    /* margin: 5px; */
+    /* display: none; */
+    /* overflow-x: auto; */
+  }
+  td {
+    padding: 10px 2px;
   }
 }

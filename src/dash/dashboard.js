@@ -54,10 +54,11 @@ function Dashboard() {
             })
     }, []);
     return (
-        <div className="dashboard">
+        <div className="dashboard ">
             <div>
-                <div className="d-flex justify-content-around">
+                <div className="d-flex justify-content-around flex-wrap">
                     <div class="contain">
+                    <Link to="/inquiry">
                         <div class="box" style={{ backgroundColor: "rgba(116,122,242,0.074)" }}>
                             <span class="title">inquiry</span>
                             <div>
@@ -67,11 +68,14 @@ function Dashboard() {
                                         :
                                         <strong> total inquiry : {inquiry}</strong>
                                 }
-                                <p><Link to="/inquiry">more info..</Link></p>
+                                <p> <Link to="/inquiry">more info..</Link></p>
+                                
                             </div>
                         </div>
+                        </Link>
                     </div>
                     <div class="contain">
+                    <Link to="/branch">
                         <div class="box" style={{ backgroundColor: "rgba(252, 48, 150,0.3)" }}>
                             <span class="title">branch</span>
                             <div>
@@ -82,12 +86,16 @@ function Dashboard() {
                                         <strong> total inquiry : {branch}</strong>
                                 }
                                 <p> <Link to="/branch">more info..</Link></p>
+                               
                             </div>
                         </div>
+                        </Link>
                     </div>
+                    
                 </div>
-                <div className="d-flex justify-content-around mt-5">
+                <div className="d-flex justify-content-around  flex-wrap">
                     <div class="contain">
+                    <Link to="/course">
                         <div class="box" style={{ backgroundColor: "rgba(255, 204, 0,0.3)" }}>
                             <span class="title">course</span>
                             <div>
@@ -97,11 +105,14 @@ function Dashboard() {
                                         :
                                         <strong> total inquiry : {course}</strong>
                                 }
-                                <p><Link to="/course">more info..</Link></p>
-                            </div>
+                                <p> <Link to="/course">more info..</Link></p>
+
+                            </div> 
                         </div>
+                        </Link>
                     </div>
                     <div class="contain">
+                    <Link to="/role">
                         <div class="box" style={{ backgroundColor: "rgba(81, 204, 138,0.3)" }}>
                             <span class="title">role</span>
                             <div>
@@ -114,6 +125,7 @@ function Dashboard() {
                                 <p> <Link to="/role">more info..</Link></p>
                             </div>
                         </div>
+                        </Link>
                     </div>
                 </div>
             </div>

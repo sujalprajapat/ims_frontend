@@ -4,6 +4,7 @@ import { RxUpdate } from "react-icons/rx";
 import { Link } from "react-router-dom"
 import { FiMinus } from "react-icons/fi";
 import Updateinquiry from "./updateinquiry";
+import { RiDeleteBin6Fill } from "react-icons/ri";
 function Inquiry() {
     var [data, setdata] = useState(null);
     var [rem, setrem] = useState(false);
@@ -52,16 +53,16 @@ function Inquiry() {
                     <table className="table">
                         <tr>
                             <th>name</th>
-                            <th>branch</th>
-                            <th>contact</th>
-                            <th>course</th>
-                            <th>join date</th>
-                            <th>reference</th>
-                            <th>ref detail</th>
-                            <th>inquiry by</th>
-                            <th>inquiry date</th>
-                            <th>status</th>
-                            <th>status date</th>
+                            <th className="d-none d-lg-table-cell" >branch</th>
+                            <th className="d-none d-lg-table-cell">contact</th>
+                            <th className="d-none d-sm-table-cell">course</th>
+                            <th className="d-none d-md-table-cell">join date</th>
+                            <th className="d-none d-xl-table-cell">reference</th>
+                            <th className="d-none d-xl-table-cell">ref detail</th>
+                            <th className="d-none d-md-table-cell">inquiry by</th>
+                            <th className="d-none d-md-table-cell">inquiry date</th>
+                            <th className="d-none d-sm-table-cell">status</th>
+                            <th className="d-none d-md-table-cell">status date</th>
                             <th>update</th>
                             <th>remove</th>
                         </tr>
@@ -72,23 +73,21 @@ function Inquiry() {
                                 return (
                                     <tr>
                                         <td>{ele.name}</td>
-                                        <td>{ele.branch_id ? ele.branch_id.branchname : "--"}</td>
-                                        <td>{ele.contact}</td>
-                                        <td>{ele.course_id ? ele.course_id.course : "--"}</td>
-                                        <td>{ele.joindate}</td>
-                                        <td>{ele.ref_id ? ele.ref_id.reference_name : "--"}</td>
-                                        <td>{ele.ref_by}</td>
-                                        <td>{ele.inq_by ? ele.inq_by.rolename : "--"}</td>
-                                        <td>{ele.inq_date}</td>
-                                        <td>{ele.status ? ele.status.status : "--"}</td>
-                                        <td>{ele.status_date}</td>
+                                        <td className="d-none d-lg-table-cell">{ele.branch_id ? ele.branch_id.branchname : "--"}</td>
+                                        <td className="d-none d-lg-table-cell">{ele.contact}</td>
+                                        <td className="d-none d-sm-table-cell">{ele.course_id ? ele.course_id.course : "--"}</td>
+                                        <td className="d-none d-md-table-cell">{ele.joindate}</td>
+                                        <td className="d-none d-xl-table-cell">{ele.ref_id ? ele.ref_id.reference_name : "--"}</td>
+                                        <td className="d-none d-xl-table-cell">{ele.ref_by}</td>
+                                        <td className="d-none d-md-table-cell">{ele.inq_by ? ele.inq_by.rolename : "--"}</td>
+                                        <td className="d-none d-md-table-cell">{ele.inq_date}</td>
+                                        <td className="d-none d-sm-table-cell">{ele.status ? ele.status.status : "--"}</td>
+                                        <td className="d-none d-md-table-cell">{ele.status_date}</td>
                                         <td>
-                                            <Link to={'/inquiry/update/' + ele._id} className="button">update</Link>
+                                            <Link to={'/inquiry/update/' + ele._id} className="button"><RxUpdate /></Link>
                                         </td>
                                         <td>
-                                            <Link className="button" onClick={() => { setid(ele._id); setrem(true) }}>remove</Link>
-
-
+                                            <Link className="button" onClick={() => { setid(ele._id); setrem(true) }}><RiDeleteBin6Fill /></Link>
                                         </td>
 
                                     </tr>
@@ -107,7 +106,7 @@ function Inquiry() {
                     <button class="NotnowBtn" onClick={() => { setrem(false) }} >no</button>
                 </div>
             </div>
-            <div>
+            <div className="pb-3">
                 <Link to="/dashboard" className="back">back</Link>
 
             </div>

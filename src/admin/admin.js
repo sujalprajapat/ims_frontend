@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { RxUpdate } from "react-icons/rx";
+import { RiDeleteBin6Fill } from "react-icons/ri";
 function Admin() {
     var [data, setdata] = useState(null);
     var [rem, setrem] = useState(false);
@@ -42,18 +44,18 @@ function Admin() {
     }
     return (
         <div className="data_table data_table">
-            <h3 className="heading">course detail</h3>
+            <h3 className="heading">admin detail</h3>
             {
                 !data ? <div className="loader"></div>
                     :
                     <table className="table1">
                         <tr>
-                            <th>image</th>
-                            <th>name</th>
-                            <th>email</th>
-                            <th>position</th>
-                            <th>branch</th>
-                            <th>contact</th>
+                            <th className="d-none d-sm-table-cell">image</th>
+                            <th >name</th>
+                            <th className="d-none d-lg-table-cell">email</th>
+                            <th className="d-none d-lg-table-cell">position</th>
+                            <th className="d-none d-xl-table-cell">branch</th>
+                            <th className="d-none d-md-table-cell">contact</th>
                             <th>update</th>
                             <th>delete</th>
                         </tr>
@@ -62,18 +64,18 @@ function Admin() {
                             data.map((ele, ind) => {
                                 return (
                                     <tr>
-                                        <td><img src={`http://localhost:5000/images/${ele.image}`} style={{ width: '100px', height: '100px', borderRadius: "50%" }} alt="admin image"></img></td>
+                                        <td className="d-none d-sm-table-cell"><img src={`http://localhost:5000/images/${ele.image}`} style={{ width: '100px', height: '100px', borderRadius: "50%" }} alt="admin image"></img></td>
                                         <td>{ele.name}</td>
-                                        <td>{ele.email}</td>
-                                        <td>{ele.role ? ele.role.rolename : "--"}</td>
-                                        <td>{ele.branch_id ? ele.branch_id.branchname : "--"}</td>
-                                        <td>{ele.contact}</td>
+                                        <td className="d-none d-lg-table-cell">{ele.email}</td>
+                                        <td className="d-none d-lg-table-cell">{ele.role ? ele.role.rolename : "--"}</td>
+                                        <td className="d-none d-xl-table-cell">{ele.branch_id ? ele.branch_id.branchname : "--"}</td>
+                                        <td className="d-none d-md-table-cell">{ele.contact}</td>
                                         <td>
-                                            <Link to={"/admin/update/" + ele._id} className="button">update</Link>
+                                            <Link to={"/admin/update/" + ele._id} className="button"><RxUpdate /></Link>
 
                                         </td>
                                         <td>
-                                            <Link className="button" onClick={() => { setid(ele._id); setrem(true) }}>remove</Link>
+                                            <Link className="button" onClick={() => { setid(ele._id); setrem(true) }}><RiDeleteBin6Fill /></Link>
                                         </td>
                                     </tr>
                                 )
@@ -88,7 +90,7 @@ function Admin() {
                     <button class="NotnowBtn" onClick={() => { setrem(false) }} >no</button>
                 </div>
             </div>
-            <div>
+            <div className="pb-3">
                 <Link to="/dashboard" className="back">back</Link>
             </div>
         </div>

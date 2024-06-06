@@ -51,7 +51,7 @@ function Update() {
             getpass(val.password || '');
             getcontact(val.contact || '');
             getbranchid(val.branch_id);
-            getbranchname(val.branch_id ? val.branch_id._id : "");
+            getbranchname(val.branch_id ? val.branch_id._id : " ");
             getroleid(val.role);
             getrolename(val.role ? val.role.id : '');
         }

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { RxUpdate } from "react-icons/rx";
+import { RiDeleteBin6Fill } from "react-icons/ri";
 function Status() {
     var [data, setdata] = useState(null);
     var [rem, setrem] = useState(false);
@@ -61,11 +63,11 @@ function Status() {
                                             {ele.status}
                                         </td>
                                         <td>
-                                            <Link to={"/status/update/" + ele._id} className="button">update</Link>
+                                            <Link to={"/status/update/" + ele._id} className="button"><RxUpdate /></Link>
 
                                         </td>
                                         <td>
-                                            <Link className="button" onClick={() => { setid(ele._id); setrem(true) }}>remove</Link>
+                                            <Link className="button" onClick={() => { setid(ele._id); setrem(true) }}><RiDeleteBin6Fill /></Link>
                                         </td>
                                     </tr>
                                 )
@@ -80,7 +82,7 @@ function Status() {
                     <button class="NotnowBtn" onClick={() => { setrem(false) }} >no</button>
                 </div>
             </div>
-            <div>
+            <div className="pb-3">
                 <Link to="/dashboard" className="back">back</Link>
             </div>
         </div>
