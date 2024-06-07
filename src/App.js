@@ -44,27 +44,27 @@ function App() {
         <Route path='/' element={ck ? <Navigate to={'/dashboard'} /> : <Admin />}></Route>
 
         <Route path='/dashboard' element={ck ? <><Dashboard /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
-        <Route path='/admin' element={<><Adminview /><Button /></>}></Route>
-        <Route path='/inquiry' element={<><Inquiry /><Button /></>}></Route>
-        <Route path='/branch' element={<><Branch /><Button /></>}></Route>
-        <Route path='/role' element={<><Role /><Button /></>}></Route>
-        <Route path='/course' element={<><Course /><Button /></>}></Route>
-        <Route path='/ref' element={<><Ref /><Button /></>}></Route>
-        <Route path='/status' element={<><Status /><Button /></>}></Route>
-        <Route path='/admin/add' element={<><Add /><Menu /><Button /></>}></Route>
-        <Route path='/admin/update/:id' element={<><Updateadmin /><Menu /><Button /></>}></Route>
-        <Route path='/role/add' element={<><Addrole /><Menu /><Button /></>}></Route>
-        <Route path='/role/update/:id' element={<><Updaterole /><Menu /><Button /></>}></Route>
-        <Route path='/branch/add' element={<><Addbranch /><Menu /><Button /></>}></Route>
-        <Route path='/branch/update/:id' element={<><Updatebranch /><Menu /><Button /></>}></Route>
-        <Route path='/course/add' element={<><Addcourse /><Menu /><Button /></>}></Route>
-        <Route path='/course/update/:id' element={<><Updatecourse /><Menu /><Button /></>}></Route>
-        <Route path='/ref/add' element={<><Addref /><Menu /><Button /></>}></Route>
-        <Route path='/ref/update/:id' element={<><Updateref /><Menu /><Button /></>}></Route>
-        <Route path='/inquiry/add' element={<><Addinquiry /><Menu /><Button /></>}></Route>
-        <Route path='/inquiry/update/:id' element={<><Updateinquiry /><Menu /><Button /></>}></Route>
-        <Route path='/status/add' element={<><Addstatus /><Menu /><Button /></>}></Route>
-        <Route path='/status/update/:id' element={<><Updatestatus /><Menu /><Button /></>}></Route>
+        <Route path='/admin' element={ck ?<><Adminview /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/inquiry' element={ck ?<><Inquiry /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/branch' element={ck ?<><Branch /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/role' element={ck ?<><Role /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/course' element={ck ?<><Course /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/ref' element={ck ?<><Ref /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/status' element={ck ?<><Status /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/admin/add' element={ck ?<><Add /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/admin/update/:id' element={ck ?<><Updateadmin /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/role/add' element={ck ?<><Addrole /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/role/update/:id' element={ck ?<><Updaterole /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/branch/add' element={ck ?<><Addbranch /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/branch/update/:id' element={ck ?<><Updatebranch /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/course/add' element={ck ?<><Addcourse /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/course/update/:id' element={ck ?<><Updatecourse /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/ref/add' element={ck ?<><Addref /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/ref/update/:id' element={ck ?<><Updateref /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/inquiry/add' element={ck ?<><Addinquiry /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/inquiry/update/:id' element={ck ?<><Updateinquiry /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/status/add' element={ck ?<><Addstatus /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
+        <Route path='/status/update/:id' element={ck ?<><Updatestatus /><Menu /><Button /></> : <Navigate to={'/'} />}></Route>
       </Routes>
     </div>
   );
