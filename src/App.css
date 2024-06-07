@@ -5,7 +5,7 @@
   font-style: normal;
 }
 body{
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: "kurale" !important;
 }
 .bttn {
